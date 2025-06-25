@@ -135,33 +135,15 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const form = document.getElementById('rfiForm');
-      const responseDiv = document.getElementById('form-response');
       form.addEventListener('submit', async function(e) {
         e.preventDefault();
-        responseDiv.innerHTML = "";
 
         const formData = new FormData(form);
-
-        try {
-          const res = await fetch('https://localhost:7129/api/Project/form-create', {
-            method: 'POST',
-            body: formData,
-          });
-
-          if (res.ok) {
-            responseDiv.innerHTML = "<span style='color:green'>Bedankt, je aanvraag is succesvol verzonden.</span>";
-            form.reset();
-          } else {
-            let errorText = "Onbekende fout";
-            try {
-              const data = await res.json();
-              errorText = data?.error || errorText;
-            } catch (_) {}
-            responseDiv.innerHTML = `<span style='color:red'>Fout: ${errorText}</span>`;
-          }
-        } catch (err) {
-          responseDiv.innerHTML = "<span style='color:red'>Er is een technische fout opgetreden.</span>";
-        }
+        // No error handling, no messages
+        fetch('https://localhost:7129/api/Project/form-create', {
+          method: 'POST',
+          body: formData,
+        });
       });
     });
   </script>
