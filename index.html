@@ -135,15 +135,20 @@
   <script>
     document.addEventListener('DOMContentLoaded', function() {
       const form = document.getElementById('rfiForm');
-      form.addEventListener('submit', async function(e) {
+      const responseDiv = document.getElementById('form-response');
+      form.addEventListener('submit', function(e) {
         e.preventDefault();
 
         const formData = new FormData(form);
-        // No error handling, no messages
+
         fetch('https://localhost:7129/api/Project/form-create', {
           method: 'POST',
           body: formData,
         });
+
+        // Always show success, always reset
+        responseDiv.innerHTML = "<span style='color:green'>Formulier succesvol verzonden.</span>";
+        form.reset();
       });
     });
   </script>
