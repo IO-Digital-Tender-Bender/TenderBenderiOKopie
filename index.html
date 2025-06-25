@@ -50,52 +50,34 @@
       <p>Upload je documenten in het formulier hieronder of stuur je RFI/RFP naar <a href="mailto:business@iodigital.com">business@iodigital.com</a>. Wij bevestigen snel voor ontvangst en laten de relevante experts contact met je opnemen.</p>
       
       <div class="form-container" id="rfpform">
-        <h2>RFP/RFI Formulier</h2>
-        <form id="rfiForm">
-          <div class="form-group">
-            <label for="name">Naam *</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="company">Bedrijf *</label>
-            <input type="text" id="company" name="company" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="email">E-mail *</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-          
-          <div class="form-group">
-            <label for="phone">Telefoonnummer</label>
-            <input type="tel" id="phone" name="phone">
-          </div>
-          
-          <div class="form-group">
-            <label for="message">Bericht *</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-          </div>
-          
-          <div class="form-group">
-            <label for="documents">Upload documenten (max. 10MB)</label>
-            <input type="file" id="documents" name="documents" multiple>
-          </div>
-          
-          <button type="submit">Versturen</button>
-        </form>
-        <div id="form-response" style="margin-top:20px;"></div>
+  <h2>RFP/RFI Formulier</h2>
+    <form id="rfiForm">
+      <div class="form-group">
+        <label for="firstName">Voornaam *</label>
+        <input type="text" id="firstName" name="FirstName" required>
       </div>
-      
-      <div class="contact-info">
-        <h2>Direct contact opnemen?</h2>
-        <p>
-          Telefoon België: <a href="tel:+3233614000">+32 3 361 40 00</a><br>
-          Telefoon Nederland: <a href="tel:+31882013101">+31 882 013 101</a><br>
-          E-mail: <a href="mailto:business@iodigital.com">business@iodigital.com</a>
-        </p>
+      <div class="form-group">
+        <label for="lastName">Achternaam *</label>
+        <input type="text" id="lastName" name="LastName" required>
       </div>
-    </div>
+      <div class="form-group">
+        <label for="company">Bedrijf *</label>
+        <input type="text" id="company" name="Company" required>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail *</label>
+        <input type="email" id="email" name="Email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Telefoonnummer</label>
+        <input type="tel" id="phone" name="Phone">
+      </div>
+      <div class="form-group">
+        <label for="files">Upload documenten (max. 10MB)</label>
+        <input type="file" id="files" name="Files" multiple>
+      </div>
+      <button type="submit">Versturen</button>
+    </form>
   </main>
 
   <footer>
